@@ -1,0 +1,218 @@
+{
+    "base_url": "https://geoservice.ist.supsi.ch/4onse/",
+    "service": "lka",
+    "dservice": "lkaqc",
+    "basic_auth": ("xx", "xx"),
+    "type": "daily",
+    "tz": "Asia/Colombo",
+    "telegram_token": "xx",
+    "telegram_db": "example_db.json",
+    "zenodo_token": "xx",
+    "zenodo_token_dev": "xx",
+    "country": "Sri Lanka",
+    "thresholds": {
+        "tmax_eh": 30.0,
+        "tmax_el": 10,
+        "tmin1_el": 10,
+        "tmin2_el": 0,
+        "r1_eh": 0.2,
+        "r2_eh": 2.0,
+        "r3_eh": 20.0
+    },
+    "properties": {
+        "default": {
+            "urn:ogc:def:parameter:x-istsos:1.0:meteo:air:temperature": {
+                "name": "TEMP",
+                "unit": "°C",
+                "methods": ["mean", "max", "min"]
+            },
+            "urn:ogc:def:parameter:x-istsos:1.0:meteo:air:humidity:relative": {
+                "name": "HUM",
+                "unit": "%",
+                "methods": ["mean"]
+            },
+            "urn:ogc:def:parameter:x-istsos:1.0:meteo:air:pressure": {
+                "name": "PRESS",
+                "unit": "hPa",
+                "methods": ["mean"]
+            },
+            "urn:ogc:def:parameter:x-istsos:1.0:meteo:air:rainfall": {
+                "name": "RAIN",
+                "unit": "mm",
+                "methods": ["sum"]
+            },
+            "urn:ogc:def:parameter:x-istsos:1.0:meteo:air:wind:velocity": {
+                "name": "WINDSPEED",
+                "unit": "m/s",
+                "methods": ["mean", "max"]
+            },
+            "urn:ogc:def:parameter:x-istsos:1.0:meteo:air:wind:direction": {
+                "name": "WINDDIRECTION",
+                "unit": "°",
+                "methods": ["mean"]
+            }
+        },
+        "pcb": {
+            "urn:ogc:def:parameter:x-istsos:1.0:meteo:air:temperature": {
+                "name": "TEMP",
+                "unit": "°C",
+                "methods": ["mean", "max", "min"]
+            },
+            "urn:ogc:def:parameter:x-istsos:1.0:meteo:air:humidity:relative": {
+                "name": "HUM",
+                "unit": "%",
+                "methods": ["mean"]
+            },
+            "urn:ogc:def:parameter:x-istsos:1.0:meteo:air:pressure": {
+                "name": "PRESS",
+                "unit": "kPa",
+                "methods": ["mean"]
+            },
+            "urn:ogc:def:parameter:x-istsos:1.0:meteo:air:rainfall": {
+                "name": "RAIN",
+                "unit": "mm",
+                "methods": ["sum"]
+            },
+            "urn:ogc:def:parameter:x-istsos:1.0:meteo:air:wind:velocity": {
+                "name": "WINDSPEED",
+                "unit": "m/s",
+                "methods": ["mean", "max"]
+            },
+            "urn:ogc:def:parameter:x-istsos:1.0:meteo:air:wind:direction": {
+                "name": "WINDDIRECTION",
+                "unit": "°",
+                "methods": ["mean"]
+            }
+        }
+    },
+    "plausible_value": {
+        "urn:ogc:def:parameter:x-istsos:1.0:meteo:air:wind:velocity": {
+            "m/s": [0, 75],
+            "methods": {
+                "p": 700
+            }
+        },
+        "urn:ogc:def:parameter:x-istsos:1.0:river:water:height": {
+            "m": [0, 900],
+            "methods": {
+                "p": 700
+            }
+        },
+        "urn:ogc:def:parameter:x-istsos:1.0:meteo:air:wind:direction": {
+            "°": [0, 360],
+            "methods": {
+                "p": 700
+            }
+        },
+        "urn:ogc:def:parameter:x-istsos:1.0:meteo:air:rainfall": {
+            "mm": [0, 400],
+            "mm/h": [0, 400],
+            "methods": {
+                "p": 700
+            }
+        },
+        "urn:ogc:def:parameter:x-istsos:1.0:meteo:air:temperature": {
+            "°C": [-80, 60],
+            "methods": {
+                "m": 710,
+                "t": 705,
+                "p": 700
+            }
+        },
+        "urn:ogc:def:parameter:x-istsos:1.0:meteo:air:humidity:relative": {
+            "%": [0, 100],
+            "methods": {
+                "m": 710,
+                "t": 705,
+                "p": 700
+            }
+        },
+        "urn:ogc:def:parameter:x-istsos:1.0:meteo:air:humidity": {
+            "%": [0, 100],
+            "methods": "ptm"
+        },
+        "urn:ogc:def:parameter:x-istsos:1.0:meteo:air:pressure": {
+            "hPa": [500, 1100],
+            "kPa": [50, 110],
+            "mbar": [500, 1100],
+            "methods": {
+                "m": 710,
+                "t": 705,
+                "p": 700
+            }
+        },
+        "urn:ogc:def:parameter:x-istsos:1.0:meteo:air:Pressure": {
+            "hPa": [500, 1100],
+            "kPa": [50, 110],
+            "mbar": [500, 1100],
+            "methods": {
+                "m": 710,
+                "t": 705,
+                "p": 700
+            }
+        },
+        "urn:ogc:def:parameter:x-istsos:1.0:meteo:pressure:height": {
+            "m": [0, 9000],
+            "hPa": [500, 1100],
+            "kPa": [50, 110],
+            "mbar": [500, 1100],
+            "methods": {
+                "m": 710,
+                "t": 705,
+                "p": 700
+            }
+        },
+        "urn:ogc:def:parameter:x-istsos:1.0:pressure:height": {
+            "hPa": [500, 1100],
+            "kPa": [50, 110],
+            "mbar": [500, 1100],
+            "m": [0, 9000],
+            "methods": {
+                "m": 710,
+                "t": 705,
+                "p": 700
+            }
+        },
+        "urn:ogc:def:parameter:x-istsos:1.0:meteo:solar:light": {
+            "lux": [0, 600000],
+            "W/m2": [0, 2000],
+            "methods": {
+                "m": 710,
+                "t": 705,
+                "p": 700
+            }
+        },
+        "urn:ogc:def:parameter:x-istsos:1.0:meteo:light": {
+            "lux": [0, 600000],
+            "methods": {
+                "m": 710,
+                "t": 705,
+                "p": 700
+            }
+        },
+        "urn:ogc:def:parameter:x-istsos:1.0:meteo:soil:humidity:relative": {
+            "%": [0, 100],
+            "methods": {
+                "m": 710,
+                "t": 705,
+                "p": 700
+            }
+        },
+        "urn:ogc:def:parameter:x-istsos:1.0:meteo:soil:moisture": {
+            "%": [0, 100],
+            "methods": {
+                "m": 710,
+                "t": 705,
+                "p": 700
+            }
+        },
+        "urn:ogc:def:parameter:x-istsos:1.0:air:temperature:internal": {
+            "°C": [-80, 60],
+            "methods": {
+                "m": 710,
+                "t": 705,
+                "p": 700
+            }
+        }
+    }
+}
