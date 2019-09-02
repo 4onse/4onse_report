@@ -1,0 +1,11 @@
+config_example.json
+*.pyc
+*__pycache__
+*.vscode
+*.ipynb_checkpoints
+*.pyc
+4onse_db.json
+data/monthly/*
+data/daily/*
+*.log
+notification/*
