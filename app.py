@@ -191,3 +191,15 @@ for m in missing_months:
     )
     rep.export_report()
     rep.zenodo_publish_monthly()
+
+# conf['year'] = 2019
+# conf['month'] = 9
+# conf['day'] = 10
+
+# rep = GenReport(
+#     conf,
+#     logger=logger
+# )
+# rep.execute()
+# rep.create_daily_report()
+# rep.telegram_msg()
