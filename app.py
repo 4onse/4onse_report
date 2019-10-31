@@ -86,7 +86,7 @@ def check_missing_days(conf, base_path):
     today_str = today.strftime("%d%m%Y")
     expected_days = []
     tmp_day = first_day
-    while tmp_day <= today.date():
+    while tmp_day <= (today.date() - timedelta(days=1)):
         expected_days.append(tmp_day.strftime("%d%m%Y"))
         tmp_day = tmp_day + timedelta(days=1)
 

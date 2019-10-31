@@ -1571,10 +1571,10 @@ class GenReport():
                     if r.status_code == 201:
                         self.logger.info("    > File OK")
                     else:
-                        self.logger.info("    > Error in creating File")
+                        self.logger.error("    > Error in creating File")
 
                 else:
-                    self.logger.info("    > Error during deposition updating")
+                    self.logger.error("    > Error during deposition updating")
 
             else:
                 self.logger.info("    > Creating deposition")
@@ -1622,9 +1622,9 @@ class GenReport():
                         r.close()
                         self.logger.info("    > File OK")
                     else:
-                        self.logger.info("    > Error in creating the File")
+                        self.logger.error("    > Error in creating the File")
                 else:
-                    self.logger.info("    > Error in creating the Deposition")
+                    self.logger.error("    > Error in creating the Deposition")
         except Exception as e:
             os.chdir(self.base_path)
             raise e
@@ -1707,7 +1707,7 @@ class GenReport():
                                 r.close()
                                 self.logger.info("    > File OK")
                             else:
-                                self.logger.info("    > Error in creating the File")
+                                self.logger.error("    > Error in creating the File")
                 else:
                     r = requests.put(
                         "{}/api/deposit/depositions/{}".format(
@@ -1762,9 +1762,9 @@ class GenReport():
                                         if r.status_code == 201:
                                             self.logger.info(f"    > {file_} UPLOADED")
                                         else:
-                                            self.logger.info(f"    > Error in creating {file_}")
+                                            self.logger.error(f"    > Error in creating {file_}")
                     else:
-                        self.logger.info("    > Error during deposition updating")
+                        self.logger.error("    > Error during deposition updating")
             except Exception as e:
                 self.logger.error("Errors")
                 self.logger.error(str(e))
